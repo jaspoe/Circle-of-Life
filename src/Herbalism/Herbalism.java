@@ -16,7 +16,7 @@ public class Herbalism {
 	
 	private List<Herb> herbs;
 	private List<String> terrainTable = new ArrayList<String>();
-	private int numberOfIngredients;
+	private List<Herb> commonHerbsTable = new ArrayList<Herb>();
 	private Dice dice = new Dice();
 	
 	
@@ -39,7 +39,8 @@ public class Herbalism {
 
 	public Herbalism(){
 		this.herbs = readHerbsFromCSV("./bin/Herbalism/Herbalism.csv");
-		this.terrainTable();		
+		this.terrainTable();
+		this.commonHerbsTable();
 	}
 	
 	private List<Herb> readHerbsFromCSV(String fileName) {
@@ -88,17 +89,53 @@ public class Herbalism {
 		}
 	}
 	
-	private void rollIngredientsNumber() {
-		numberOfIngredients = dice.roll(4);
-	}
+	private void commonHerbsTable() {
 
-	public void rollIngredients(String terrain) {
-		List<Herb> temp = new ArrayList<Herb>();
 		for(int i = 0; i < herbs.size(); i++) {
-			if(herbs.get(i).getTerrain().equals(terrain)) {
-				temp.add(herbs.get(i));
-				System.out.println(herbs.get(i).toString());
+			if(herbs.get(i).getTerrain().equals("Common")) {
+				commonHerbsTable.add(herbs.get(i));
 			}
 		}
 	}
+	
+
+	public List<Herb> rollIngredients(String terrain) {
+		List<Herb> temp = new ArrayList<Herb>();
+		List<Herb> rolledIngredients = new ArrayList<Herb>();
+		for(int i = 0; i < herbs.size(); i++) {
+			if(herbs.get(i).getTerrain().equals(terrain)) {
+				temp.add(herbs.get(i));
+			}
+		}
+		
+		for(int i = 0; i < dice.roll(4); i++) {
+			int ingredientNumber = dice.roll(6) + dice.roll(6) -2;
+			if(ingredientNumber < 3 || ingredientNumber > 7) {
+				if(dice.roll(20) > 14) {
+					rolledIngredients.add(new Herb("", "Elemental Water", "", "", ""));
+				}
+			}else if(temp.get(ingredientNumber).getName().equals("Common Ingredient")) {
+				rolledIngredients.add(commonHerbsTable.get(ingredientNumber));
+			}else {
+				rolledIngredients.add(temp.get(ingredientNumber));
+			}
+		}
+		for(int i = 0; i < rolledIngredients.size(); i++) {
+			System.out.println(rolledIngredients.get(i));
+		}
+		return rolledIngredients;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

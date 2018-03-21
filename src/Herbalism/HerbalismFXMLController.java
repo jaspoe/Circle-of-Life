@@ -3,6 +3,7 @@ package Herbalism;
 import javafx.event.ActionEvent;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXComboBox;
@@ -15,11 +16,11 @@ import javafx.scene.control.TableView;
 public class HerbalismFXMLController implements Initializable{
     Herbalism herbalism = new Herbalism();
 	
-	
     @FXML
     private void herbalismButtonRoll(ActionEvent event) {
         String terrain = herbalismComboBox.getValue();
-    	herbalism.rollIngredients(terrain);
+    	herbalismFillList(herbalism.rollIngredients(terrain));
+    	
     }
     
     @FXML
@@ -35,8 +36,11 @@ public class HerbalismFXMLController implements Initializable{
     @FXML
     JFXListView<String> herbalismListView = new JFXListView<String>();
     
-    public void herbalismFillList() {
-    	herbalismListView.getItems().add("test");
+    public void herbalismFillList(List<Herb> herbList) {
+    	herbalismListView.getItems().clear();
+    	for(int i = 0; i < herbList.size(); i++) {
+    		herbalismListView.getItems().add(herbList.get(i).getName() + ", " + herbList.get(i).getAdditionalRule());
+    	}
     }
     
     @Override

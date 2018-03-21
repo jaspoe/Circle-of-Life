@@ -22,7 +22,6 @@ public class Main extends Application {
 		
 		HerbalismFXMLController herbalismController = loader.getController();
 		herbalismController.herbalismSetTerrain();
-		herbalismController.herbalismFillList();
 		
 		
 		primaryStage.setTitle("Circle of Life");
