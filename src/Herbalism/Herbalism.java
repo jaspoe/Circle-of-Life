@@ -12,7 +12,7 @@ import java.util.List;
 public class Herbalism {
 	
 	public Herbalism(){
-		List<Herb> herbs = readHerbsFromCSV("./Herbalism/Herbalism.csv");
+		List<Herb> herbs = readHerbsFromCSV("./bin/Herbalism/Herbalism.csv");
 		
 		//print all Herbs
 		for (Herb h : herbs) {
@@ -26,7 +26,7 @@ public class Herbalism {
 		List<Herb> herbs = new ArrayList<>();
 		Path pathToFile = Paths.get(fileName);
 		
-		try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.US_ASCII)){
+		try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.ISO_8859_1)){
 			String line = br. readLine();
 			
 			while (line != null) {
@@ -51,7 +51,7 @@ public class Herbalism {
 		String terrain = metadata[1];
 		String name = metadata[2];
 		String rarity = metadata[3];
-		int dc = Integer.parseInt(metadata[4]);
+		String dc = metadata[4];
 		String additionalRule = metadata[5];
 		
 		return new Herb(terrain, name, rarity, dc, additionalRule);
