@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXListView;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,7 +18,8 @@ public class HerbalismFXMLController implements Initializable{
 	
     @FXML
     private void herbalismButtonRoll(ActionEvent event) {
-        System.out.println("You clicked me!");
+        String terrain = herbalismComboBox.getValue();
+    	herbalism.rollIngredients(terrain);
     }
     
     @FXML
@@ -31,10 +33,10 @@ public class HerbalismFXMLController implements Initializable{
     
     
     @FXML
-    TableView herbalismTableView = new TableView();
+    JFXListView<String> herbalismListView = new JFXListView<String>();
     
-    public void herbalismSetTable() {
-    	
+    public void herbalismFillList() {
+    	herbalismListView.getItems().add("test");
     }
     
     @Override

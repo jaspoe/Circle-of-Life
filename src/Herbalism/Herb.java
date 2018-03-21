@@ -2,7 +2,6 @@ package Herbalism;
 
 public class Herb {
 
-	private int id = 0;
 	private String dc;
 	private String terrain;
 	private String name;
@@ -22,17 +21,9 @@ public class Herb {
 
 	public void herbPrint() {
 		System.out.println(
-				"HerbID: " + this.id + 
-				"\n Herb Name: " + this.name +
-				"\n Herb Terrain: " + this.terrain);
+				"\n Herb Name: " + this.name);
 	}
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	public String getDc() {
 		return dc;

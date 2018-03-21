@@ -9,11 +9,17 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import application.Dice;
+
 
 public class Herbalism {
 	
 	private List<Herb> herbs;
 	private List<String> terrainTable = new ArrayList<String>();
+	private int numberOfIngredients;
+	private Dice dice = new Dice();
+	
+	
 	
 	public List<Herb> getHerbs() {
 		return herbs;
@@ -82,5 +88,17 @@ public class Herbalism {
 		}
 	}
 	
-	
+	private void rollIngredientsNumber() {
+		numberOfIngredients = dice.roll(4);
+	}
+
+	public void rollIngredients(String terrain) {
+		List<Herb> temp = new ArrayList<Herb>();
+		for(int i = 0; i < herbs.size(); i++) {
+			if(herbs.get(i).getTerrain().equals(terrain)) {
+				temp.add(herbs.get(i));
+				System.out.println(herbs.get(i).toString());
+			}
+		}
+	}
 }
