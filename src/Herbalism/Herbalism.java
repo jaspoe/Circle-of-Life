@@ -13,14 +13,11 @@ import java.util.List;
 public class Herbalism {
 	
 	List<Herb> herbs;
+	List<String> terrainTable = new ArrayList<String>();
 	
 	public Herbalism(){
 		this.herbs = readHerbsFromCSV("./bin/Herbalism/Herbalism.csv");
-		
-		//print all Herbs
-		for (Herb h : herbs) {
-			System.out.println(h);
-		}
+		this.terrainTable();		
 	}
 	
 	private List<Herb> readHerbsFromCSV(String fileName) {
@@ -58,6 +55,16 @@ public class Herbalism {
 		return new Herb(terrain, name, rarity, dc, additionalRule);
 	}
 	
+	private void terrainTable() {
+		String tempTerrain = herbs.get(0).getTerrain();
+		terrainTable.add(tempTerrain);
+		for(int i = 1; i < herbs.size(); i++) {
+			if(!tempTerrain.equals(herbs.get(i).getTerrain())) {
+				tempTerrain = herbs.get(i).getTerrain();
+				terrainTable.add(tempTerrain);
+			}
+		}
+	}
 	
 	
 }
