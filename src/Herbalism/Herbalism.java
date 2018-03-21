@@ -9,17 +9,19 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Herbalism {
 	
+	List<Herb> herbs;
+	
 	public Herbalism(){
-		List<Herb> herbs = readHerbsFromCSV("./bin/Herbalism/Herbalism.csv");
+		this.herbs = readHerbsFromCSV("./bin/Herbalism/Herbalism.csv");
 		
 		//print all Herbs
 		for (Herb h : herbs) {
 			System.out.println(h);
 		}
 	}
-	
 	
 	private List<Herb> readHerbsFromCSV(String fileName) {
 
@@ -46,7 +48,6 @@ public class Herbalism {
 		return herbs;
 	}
 
-
 	private static Herb createdHerb(String[] metadata) {
 		String terrain = metadata[1];
 		String name = metadata[2];
@@ -56,5 +57,7 @@ public class Herbalism {
 		
 		return new Herb(terrain, name, rarity, dc, additionalRule);
 	}
+	
+	
 	
 }
