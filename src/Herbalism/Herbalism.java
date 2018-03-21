@@ -12,9 +12,25 @@ import java.util.List;
 
 public class Herbalism {
 	
-	List<Herb> herbs;
-	List<String> terrainTable = new ArrayList<String>();
+	private List<Herb> herbs;
+	private List<String> terrainTable = new ArrayList<String>();
 	
+	public List<Herb> getHerbs() {
+		return herbs;
+	}
+
+	public void setHerbs(List<Herb> herbs) {
+		this.herbs = herbs;
+	}
+
+	public List<String> getTerrainTable() {
+		return terrainTable;
+	}
+
+	public void setTerrainTable(List<String> terrainTable) {
+		this.terrainTable = terrainTable;
+	}
+
 	public Herbalism(){
 		this.herbs = readHerbsFromCSV("./bin/Herbalism/Herbalism.csv");
 		this.terrainTable();		

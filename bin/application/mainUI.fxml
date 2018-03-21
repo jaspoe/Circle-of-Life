@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,37 +8,52 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #424242;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Herbalism.HerbalismFXMLController">
-    <tabs>
-        <Tab closable="false" text="Herbalism">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <children>
-                        <VBox prefHeight="372.0" prefWidth="600.0">
-                            <children>
-                                <HBox prefHeight="84.0" prefWidth="600.0">
-                                    <children>
-                                        <AnchorPane prefHeight="68.0" prefWidth="600.0">
-                                            <children>
-                                                <JFXComboBox focusColor="#fff9c4" layoutX="45.0" layoutY="26.0" prefHeight="39.0" prefWidth="249.0" promptText="Choose Terrain..." style="-fx-prompt-text-fill: #ffffff;" unFocusColor="#00bcd4" />
-                                                <JFXButton fx:id="herbalismButtonRoll" layoutX="341.0" layoutY="27.0" onAction="#herbalismButtonRoll" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #00BCD4;" text="Roll" textFill="WHITE" />
-												<Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-                                            </children>
-                                        </AnchorPane>
-                                    </children>
-                                </HBox>
-                                <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #424242;">
-                                    <columns>
-                                        <TableColumn editable="false" prefWidth="75.0" sortable="false" style="-fx-border-color: #E0E0E0;" text="C1" />
-                                        <TableColumn prefWidth="75.0" text="C2" />
-                                        <TableColumn prefWidth="75.0" text="Column X" />
-                                    </columns>
-                                </TableView>
-                            </children>
-                        </VBox>
-                    </children>
-                </AnchorPane>
-            </content>
-        </Tab>
-    </tabs>
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="Herbalism.HerbalismFXMLController">
+	<tabs>
+		<Tab closable="false" text="Herbalism">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+					prefWidth="200.0">
+					<children>
+						<VBox prefHeight="372.0" prefWidth="600.0">
+							<children>
+								<HBox prefHeight="84.0" prefWidth="600.0">
+									<children>
+										<AnchorPane prefHeight="68.0" prefWidth="600.0">
+											<children>
+												<JFXComboBox id="herbalismComboBox" fx:id="herbalismComboBox"
+													editable="false" focusColor="#fff9c4" layoutX="45.0"
+													layoutY="26.0" prefHeight="39.0" prefWidth="249.0"
+													promptText="Choose Terrain..." unFocusColor="#00bcd4" />
+												<JFXButton fx:id="herbalismButtonRoll" layoutX="341.0"
+													layoutY="27.0" onAction="#herbalismButtonRoll" prefHeight="38.0"
+													prefWidth="176.0" style="-fx-background-color: #00BCD4;"
+													text="Roll" textFill="WHITE" />
+												<Label fx:id="label" layoutX="126" layoutY="120"
+													minHeight="16" minWidth="69" />
+											</children>
+										</AnchorPane>
+									</children>
+								</HBox>
+								<TableView id="herbalismTableView" fx:id="herbalismTableView"
+									maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+									prefHeight="200.0" prefWidth="200.0">
+									<columns>
+										<TableColumn editable="false" prefWidth="75.0"
+											sortable="false" style="-fx-border-color: #E0E0E0;" text="C1" />
+									</columns>
+									<VBox.margin>
+										<Insets />
+									</VBox.margin>
+								</TableView>
+							</children>
+						</VBox>
+					</children>
+				</AnchorPane>
+			</content>
+		</Tab>
+	</tabs>
 </JFXTabPane>
