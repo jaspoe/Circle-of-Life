@@ -1,0 +1,100 @@
+ID;Terrain;Ingredients;Rarity;DC;AdditionalRule
+1;Arctic;Silver Hibiscus;Rare;4;-
+2;Arctic;Mortflesh Powder;Rare;5;-
+3;Arctic;Ironwood Heart;Uncommon;3;-
+4;Arctic;Frozen Seedlings;Rare;4;Find x2 the rolled amount
+5;Arctic;Common Ingredient;-;0;Roll on Common Ingredient table
+6;Arctic;Common Ingredient;-;0;Roll on Common Ingredient table
+7;Arctic;Common Ingredient;-;0;Roll on Common Ingredient table
+8;Arctic;Arctic Creeper;Common;2;Find x2 the rolled amount
+9;Arctic;Fennel Silk;Common;2;-
+10;Arctic;Fiend's Ivy;Rare;4;-
+11;Arctic;Voidroot;Very Rare;5;-
+12;Coastal;Hydrathistle;Uncommon;4;-
+13;Coastal;Amanita Cap;Common;5;-
+14;Coastal;Hyancinth Nectar;Common;3;-
+15;Coastal;Chromus Slime;Rare;4;Find x2 the rolled amount
+16;Coastal;Common Ingredient;-;0;Roll on Common Ingredient table
+17;Coastal;Common Ingredient;-;0;Roll on Common Ingredient table
+18;Coastal;Common Ingredient;-;0;Roll on Common Ingredient table
+19;Coastal;Lavender Sprig;Common;-2;Find x2 the rolled amount
+20;Coastal;Blue Toadshade;Rare;2;-
+21;Coastal;Wrackwort Bulbs;Rare;4;-
+22;Coastal;Cosmos Glond;Rare;5;-
+23;Forest;Harrada Leaf;Common;1;-
+24;Forest;Nightshade Berries;Uncommon;3;-
+25;Forest;Emetic Wax;Common;1;-
+26;Forest;Verdant Nettle;Uncommon;2;-
+27;Forest;Common Ingredient;-;0;Roll on Common Ingredient table
+28;Forest;Common Ingredient;-;0;Roll on Common Ingredient table
+29;Forest;Common Ingredient;-;0;Roll on Common Ingredient table
+30;Forest;Arrow Root;Uncommon;2;-
+31;Forest;Ironwood Heart;Uncommon;3;-
+32;Forest;Blue Toadshade;Rare;2;-
+33;Forest;Wisp Stalks;Rare;5;Find 2x during Night, Re-roll during Day
+34;Grasslands;Harrada Leaf;Common;1;-
+35;Grasslands;Drakus Flower;Common;2;-
+36;Grasslands;Lavender Sprig;Common;-2;Find x2 the rolled amount
+37;Grasslands;Arrow Root;Uncommon;2;-
+38;Grasslands;Common Ingredient;-;0;Roll on Common Ingredient table
+39;Grasslands;Common Ingredient;-;0;Roll on Common Ingredient table
+40;Grasslands;Common Ingredient;-;0;Roll on Common Ingredient table
+41;Grasslands;Scillia Beans;Common;1;Find x2 the rolled amount
+42;Grasslands;Cactus Juice;Common;2;-
+43;Grasslands;Tail Leaf;Very Rare;5;-
+44;Grasslands;Hyancinth Nectar;Common;3;-
+45;Hills;Devil’s Bloodleaf;Very Rare;5;-
+46;Hills;Nightshade Berries;Uncommon;3;-
+47;Hills;Tail Leaf;Very Rare;5;Find x2 the rolled amount
+48;Hills;Lavender Sprig;Common;-2;-
+49;Hills;Common Ingredient;-;0;Roll on Common Ingredient table
+50;Hills;Common Ingredient;-;0;Roll on Common Ingredient table
+51;Hills;Common Ingredient;-;0;Roll on Common Ingredient table
+52;Hills;Ironwood Heart;Uncommon;3;-
+53;Hills;Gengko Brush;Uncommon;2;-
+54;Hills;Rock Vine;Rare;4;Find x2 the rolled amount
+55;Hills;Harrada Leaf;Common;1;-
+56;Mountain;Basilisk’s Breath;Very Rare;5;-
+57;Mountain;Frozen Seedlings;Rare;4;Find x2 the rolled amount
+58;Mountain;Arctic Creeper;Common;2;Find x2 the rolled amount
+59;Mountain;Dried Ephedra;Uncommon;2;-
+60;Mountain;Common Ingredient;-;0;Roll on Common Ingredient table
+61;Mountain;Common Ingredient;-;0;Roll on Common Ingredient table
+62;Mountain;Common Ingredient;-;0;Roll on Common Ingredient table
+63;Mountain;Drakus Flower;Common;2;-
+64;Mountain;Luminous Cap Dust;Rare;4;Find x2 the rolled amount in caves
+65;Mountain;Rock Vine;Rare;4;-
+66;Mountain;Primordial Balm;Rare;4;-
+67;Swamp;Devil’s Bloodleaf;Very Rare;5;-
+68;Swamp;Spineflower Berries;Uncommon;3;-
+69;Swamp;Emetic Wax;Common;1;-
+70;Swamp;Amanita Cap;Common;5;Find x2 the rolled amount
+71;Swamp;Common Ingredient;-;0;Roll on Common Ingredient table
+72;Swamp;Common Ingredient;-;0;Roll on Common Ingredient table
+73;Swamp;Common Ingredient;-;0;Roll on Common Ingredient table
+74;Swamp;Blue Toadshade;Rare;2;Find x2 the rolled amount
+75;Swamp;Wrackwort Bulbs;Rare;4;-
+76;Swamp;Hydrathistle;Uncommon;4;Find x2 the rolled amount in rain
+77;Swamp;Primordial Balm;Rare;4;-
+78;Underdark;Primordial Balm;Rare;4;Find x1-2 the rolled amount
+79;Underdark;Silver Hibiscus;Rare;4;-
+80;Underdark;Devil’s Bloodleaf;Very Rare;5;-
+81;Underdark;Chromus Slime;Rare;4;-
+82;Underdark;Mortflesh Powder;Rare;5;Find x2 the rolled amount
+83;Underdark;Fennel Silk;Common;2;-
+84;Underdark;Fiend's Ivy;Rare;4;-
+85;Underdark;Gengko Brush;Uncommon;2;-
+86;Underdark;Luminous Cap Dust;Rare;4;Find x2 the rolled amount
+87;Underdark;Radiant Synthseed;Rare;2;-
+88;Underdark;Wisp Stalks;Rare;5;-
+89;Common;Mandrake Root;Common;0;-
+90;Common;Quicksilver Lichen;Uncommon;3;-
+91;Common;Quicksilver Lichen;Uncommon;3;-
+92;Common;Wild Sageroot;Common;0;-
+93;Common;Wild Sageroot;Common;0;-
+94;Common;Bloodgrass;Common;0;Re-roll if not tracking provisions
+95;Common;Wyrmtongue Petals;Common;0;-
+96;Common;Wyrmtongue Petals;Common;0;-
+97;Common;Milkweed Seeds;Common;2;-
+98;Common;Milkweed Seeds;Common;2;-
+99;Common;Mandrake Root;Common;0;-
