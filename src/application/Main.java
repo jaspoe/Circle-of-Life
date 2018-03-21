@@ -14,15 +14,6 @@ public class Main extends Application {
 		
 		Parent root = FXMLLoader.load(getClass().getResource("mainUI.fxml"));
 		
-		/*HerbalismUI herbalismTab = new HerbalismUI();
-		
-		TabPane mainTabPane = new TabPane();
-		
-		mainTabPane.getTabs().add(herbalismTab.createHerablismTab());
-		
-		root.getChildren().add(mainTabPane);*/
-		
-
 		primaryStage.setTitle("Circle of Life");
 		primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.show();
