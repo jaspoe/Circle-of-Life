@@ -107,7 +107,7 @@ public class Herbalism {
 				temp.add(herbs.get(i));
 			}
 		}
-		
+
 		for(int i = 0; i < dice.roll(4); i++) {
 			int ingredientNumber = dice.roll(6) + dice.roll(6) -2;
 			if(ingredientNumber < 3 || ingredientNumber > 7) {
